@@ -194,7 +194,29 @@ cloth3D: {
 
 ## 🌐 Deployment
 
-### Vercel (Recommended)
+### Cloudflare Pages (Recommended)
+
+#### Option A: Connect via Cloudflare Dashboard (Automatic CI/CD)
+1. Go to the [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
+2. Select your repository: `nandish87/jayaram-silk-house`.
+3. Configure build settings:
+   - **Framework preset**: `Vite`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Environment variables**:
+     - `NODE_VERSION` = `20`
+4. Click **Save and Deploy**. Cloudflare Pages will automatically build and publish your site at `https://jayaram-silk-house.pages.dev` with free SSL and edge CDN caching!
+
+#### Option B: Direct CLI Deployment via Wrangler
+```bash
+# Build the production bundle
+npm run build
+
+# Deploy directly to Cloudflare Pages
+npx wrangler pages deploy dist --project-name=jayaram-silk-house
+```
+
+### Vercel
 
 ```bash
 # Install Vercel CLI
@@ -202,8 +224,6 @@ npm i -g vercel
 
 # Deploy
 vercel
-
-# Or connect your Git repo at https://vercel.com/new
 ```
 
 ### Netlify
