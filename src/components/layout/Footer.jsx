@@ -155,44 +155,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Monolith Watermark Attribution */}
-        <div className="mt-10 p-4 sm:p-5 rounded-2xl bg-black/50 border border-silk-gold/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3 text-center sm:text-left">
-            <div className="w-8 h-8 rounded-full bg-silk-maroon border border-silk-gold/40 flex items-center justify-center shrink-0">
-              <span className="font-serif font-bold text-silk-gold text-sm">M</span>
-            </div>
-            <div>
-              <p className="text-xs text-silk-ivory font-serif font-medium">
-                Engineered for Free by{' '}
-                <a
-                  href="https://getmonolith.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-silk-gold hover:text-white underline underline-offset-4 decoration-silk-gold/50"
-                >
-                  Monolith
-                </a>
-                {' '}— Supporting Traditional Indian Handloom Weavers
-              </p>
-              <p className="text-[11px] text-silk-sand/70 font-sans mt-0.5">
-                One System. Every Reply. | Autonomous AI Infrastructure
-              </p>
-            </div>
-          </div>
-
-          <a
-            href="https://getmonolith.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3.5 py-1.5 rounded-full border border-silk-gold/40 hover:border-silk-gold bg-silk-maroon/60 text-silk-gold-light hover:text-white text-xs font-serif flex items-center gap-1.5 transition-colors shrink-0"
-          >
-            <span>Visit getmonolith.in</span>
-            <ExternalLink className="w-3 h-3 text-silk-gold" />
-          </a>
-        </div>
-
         {/* Bottom Bar & Copyright */}
-        <div className="mt-8 pt-6 border-t border-silk-gold/20 flex flex-col sm:flex-row items-center justify-between text-xs text-silk-sand gap-4">
+        <div className="mt-12 pt-6 border-t border-silk-gold/20 flex flex-col sm:flex-row items-center justify-between text-xs text-silk-sand gap-4">
           <div className="text-center sm:text-left">
             <p>© {new Date().getFullYear()} {brandConfig.identity.legalName}. All Rights Reserved.</p>
             <p className="text-[11px] text-silk-gold/60 mt-0.5">

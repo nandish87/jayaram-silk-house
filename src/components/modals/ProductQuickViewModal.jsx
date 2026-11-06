@@ -1,14 +1,22 @@
-import React, { useEffect, lazy, Suspense } from 'react';
-import { X, MessageCircle, Phone, Check, ShieldCheck, Sparkles, Scale, Maximize2 } from 'lucide-react';
-
-// Lazy-load 3D swatch viewer (brings in Three.js only when modal opens)
-const FabricSwatchViewer = lazy(() => import('../3d/FabricSwatchViewer'));
+import React, { useState, useEffect, useRef } from 'react';
+import { X, MessageCircle, Phone, ShieldCheck, Sparkles, ZoomIn, Maximize2 } from 'lucide-react';
 import brandConfig from '../../brand.config';
 
 export default function ProductQuickViewModal({ product, onClose }) {
+  const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
+  const [isZooming, setIsZooming] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const imgContainerRef = useRef(null);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') {
+        if (isFullscreen) {
+          setIsFullscreen(false);
+        } else {
+          onClose();
+        }
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     document.body.style.overflow = 'hidden';
@@ -17,7 +25,7 @@ export default function ProductQuickViewModal({ product, onClose }) {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [onClose]);
+  }, [onClose, isFullscreen]);
 
   if (!product) return null;
 
@@ -25,8 +33,19 @@ export default function ProductQuickViewModal({ product, onClose }) {
     brandConfig.contact.whatsapp.quickInquiryMessage(product.name)
   )}`;
 
+  const handleMouseMove = (e) => {
+    if (!imgContainerRef.current) return;
+    const rect = imgContainerRef.current.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setZoomPos({
+      x: Math.max(0, Math.min(100, x)),
+      y: Math.max(0, Math.min(100, y))
+    });
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/85 backdrop-blur-md animate-fadeIn">
       {/* Modal Container */}
       <div 
         className="relative w-full max-w-4xl bg-silk-maroon-dark border-2 border-silk-gold/50 rounded-3xl shadow-2xl overflow-hidden my-8"
@@ -37,7 +56,7 @@ export default function ProductQuickViewModal({ product, onClose }) {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-silk-gold animate-pulse"></span>
             <span className="font-serif text-xs text-silk-gold uppercase tracking-widest font-semibold">
-              3D Fabric Inspection & Quick View
+              Authentic Handloom Saree Detail & Weave Inspector
             </span>
           </div>
           <button
@@ -51,32 +70,55 @@ export default function ProductQuickViewModal({ product, onClose }) {
 
         {/* Modal Body */}
         <div className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 text-silk-ivory">
-          {/* Left Column: 3D Swatch & Image Preview */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="relative">
-              <Suspense fallback={
-                <div className="w-full h-72 sm:h-80 rounded-2xl bg-silk-maroon-dark/80 border border-silk-gold/30 flex items-center justify-center">
-                  <div className="animate-pulse text-silk-gold font-serif text-xs tracking-widest">Loading 3D Swatch...</div>
-                </div>
-              }>
-                <FabricSwatchViewer product={product} />
-              </Suspense>
-              <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-silk-maroon/90 border border-silk-gold/50 text-[10px] font-serif text-silk-gold-light uppercase tracking-wider">
+          {/* Left Column: Real Saree Photo with Interactive Zoom Lens */}
+          <div className="lg:col-span-5 space-y-3">
+            <div
+              ref={imgContainerRef}
+              onMouseMove={handleMouseMove}
+              onMouseEnter={() => setIsZooming(true)}
+              onMouseLeave={() => setIsZooming(false)}
+              className="relative aspect-[3/4] rounded-2xl overflow-hidden border-2 border-silk-gold/40 shadow-2xl bg-black cursor-crosshair group"
+            >
+              {/* Main Image with Zoom Transform */}
+              <img
+                src={product.image}
+                alt={product.name}
+                style={{
+                  transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`,
+                  transform: isZooming ? 'scale(2.2)' : 'scale(1)',
+                  transition: isZooming ? 'none' : 'transform 0.3s ease-out',
+                }}
+                className="w-full h-full object-cover select-none pointer-events-none"
+              />
+
+              {/* Badges */}
+              <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-silk-maroon/95 border border-silk-gold/60 text-[10px] font-serif text-silk-gold-light uppercase tracking-wider shadow-md pointer-events-none">
                 {product.badge || 'Handloom Special'}
+              </div>
+
+              {/* Fullscreen Expand Button */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsFullscreen(true);
+                }}
+                className="absolute top-3 right-3 p-2 rounded-full bg-black/60 hover:bg-silk-maroon text-silk-gold border border-silk-gold/30 hover:border-silk-gold transition-colors"
+                title="View Fullscreen"
+              >
+                <Maximize2 className="w-4 h-4" />
+              </button>
+
+              {/* Bottom Instruction Hint */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black/75 backdrop-blur-sm border border-silk-gold/30 text-[10px] text-silk-gold-light flex items-center gap-1.5 pointer-events-none whitespace-nowrap">
+                <ZoomIn className="w-3.5 h-3.5 text-silk-gold" />
+                <span>{isZooming ? 'Moving cursor inspects weave' : 'Hover to magnify real silk weave'}</span>
               </div>
             </div>
 
-            {/* Static Image / 2D Card preview */}
-            <div className="p-3 rounded-2xl bg-black/30 border border-silk-gold/20 flex items-center gap-3">
-              <img 
-                src={product.image} 
-                alt={product.name} 
-                className="w-16 h-16 object-cover rounded-xl border border-silk-gold/30"
-              />
-              <div className="text-xs">
-                <span className="text-silk-gold font-serif block">Catalog Code: {product.code}</span>
-                <span className="text-[11px] text-silk-sand block mt-0.5">{product.color}</span>
-              </div>
+            {/* Catalog Identification Pill */}
+            <div className="p-3 rounded-xl bg-silk-maroon/60 border border-silk-gold/20 flex items-center justify-between text-xs">
+              <span className="text-silk-gold font-serif font-semibold">Catalog Code: {product.code}</span>
+              <span className="text-silk-sand font-medium">{product.color}</span>
             </div>
           </div>
 
@@ -172,7 +214,32 @@ export default function ProductQuickViewModal({ product, onClose }) {
           </div>
         </div>
       </div>
+
+      {/* Fullscreen Saree Lightbox View */}
+      {isFullscreen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
+          onClick={() => setIsFullscreen(false)}
+        >
+          <div className="relative max-w-4xl max-h-[90vh] flex flex-col items-center">
+            <button
+              onClick={() => setIsFullscreen(false)}
+              className="absolute -top-10 right-0 p-2 text-silk-gold hover:text-white"
+              aria-label="Close fullscreen"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="max-w-full max-h-[85vh] object-contain rounded-2xl border-2 border-silk-gold/50 shadow-2xl"
+            />
+            <div className="mt-3 text-center text-xs text-silk-sand font-serif">
+              {product.name} • {product.code}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
-

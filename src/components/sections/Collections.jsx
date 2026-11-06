@@ -29,7 +29,7 @@ export default function Collections({ onQuickView }) {
           </h2>
 
           <p className="text-xs sm:text-sm text-silk-sand font-sans max-w-2xl mx-auto leading-relaxed">
-            Every piece is hand-woven with pure mulberry silk yarns and rich gold zari. Click on any saree to launch the interactive <strong>3D Fabric Swatch Inspector</strong>.
+            Every piece is hand-woven with pure mulberry silk yarns and authentic gold zari. Click on any saree to inspect the detailed handloom weave and pallu craftsmanship.
           </p>
         </div>
 
