@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#4A0511" />
+  <rect x="50" y="50" width="700" height="500" fill="#D4AF37" />
+  <rect x="80" y="80" width="640" height="440" fill="#5C0B18" />
+  <g fill="#FFE885" opacity="0.9">
+    <circle cx="200" cy="300" r="80" stroke="#D4AF37" stroke-width="8" fill="none"/>
+    <circle cx="400" cy="300" r="100" stroke="#D4AF37" stroke-width="10" fill="none"/>
+    <circle cx="600" cy="300" r="80" stroke="#D4AF37" stroke-width="8" fill="none"/>
+    <path d="M 360,300 Q 400,240 440,300 Q 400,360 360,300 Z" fill="#FFE885"/>
+  </g>
+  <text x="400" y="565" text-anchor="middle" fill="#F5E6BE" font-family="serif" font-size="18" letter-spacing="1">Pure Gold Zari Master Weave Pallu</text>
+</svg>

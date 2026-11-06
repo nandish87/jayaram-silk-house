@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="drapeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A0511" />
+      <stop offset="50%" stop-color="#B51B38" />
+      <stop offset="100%" stop-color="#240207" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#1A1817" />
+  <path d="M 150,50 Q 300,300 200,550 Q 450,580 650,550 Q 550,300 700,50 Z" fill="url(#drapeGrad)" />
+  <path d="M 300,50 Q 450,300 380,550" stroke="#FFE885" stroke-width="4" fill="none" opacity="0.8"/>
+  <path d="M 450,50 Q 600,300 520,550" stroke="#FFE885" stroke-width="4" fill="none" opacity="0.8"/>
+  <text x="400" y="575" text-anchor="middle" fill="#F5E6BE" font-family="serif" font-size="18" letter-spacing="1">Bridal Saree Grace & Sheen in Natural Daylight</text>
+</svg>

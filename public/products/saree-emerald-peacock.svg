@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="silkEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062417" />
+      <stop offset="30%" stop-color="#0E4A2E" />
+      <stop offset="70%" stop-color="#0B3823" />
+      <stop offset="100%" stop-color="#04160E" />
+    </linearGradient>
+    <linearGradient id="goldZariEm" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#B88A28" />
+      <stop offset="30%" stop-color="#FCE57A" />
+      <stop offset="70%" stop-color="#DDA932" />
+      <stop offset="100%" stop-color="#916B19" />
+    </linearGradient>
+    <pattern id="rudrakshaPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="8" fill="url(#goldZariEm)" opacity="0.8"/>
+      <circle cx="20" cy="20" r="4" fill="#0E4A2E"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#silkEmerald)" />
+  <rect width="800" height="1000" fill="url(#rudrakshaPattern)" />
+  
+  <!-- Subtle drape light -->
+  <path d="M 100,0 Q 250,500 200,1000 L 120,1000 Q 180,500 20,0 Z" fill="white" opacity="0.08" />
+  <path d="M 450,0 Q 600,500 550,1000 L 480,1000 Q 520,500 370,0 Z" fill="white" opacity="0.08" />
+
+  <!-- Rich Mustard & Zari Border -->
+  <g transform="translate(0, 720)">
+    <rect x="0" y="0" width="800" height="280" fill="url(#goldZariEm)" />
+    <rect x="0" y="20" width="800" height="40" fill="#916B19" opacity="0.8" />
+    <!-- Peacock Stylized Silhouette row -->
+    <path d="M 50,45 Q 70,25 90,45 Q 110,65 130,45" fill="none" stroke="#FCE57A" stroke-width="4" />
+    <path d="M 210,45 Q 230,25 250,45 Q 270,65 290,45" fill="none" stroke="#FCE57A" stroke-width="4" />
+    <path d="M 370,45 Q 390,25 410,45 Q 430,65 450,45" fill="none" stroke="#FCE57A" stroke-width="4" />
+    <path d="M 530,45 Q 550,25 570,45 Q 590,65 610,45" fill="none" stroke="#FCE57A" stroke-width="4" />
+    <path d="M 690,45 Q 710,25 730,45 Q 750,65 770,45" fill="none" stroke="#FCE57A" stroke-width="4" />
+
+    <rect x="0" y="80" width="800" height="160" fill="#0B3823" opacity="0.9" />
+    <!-- Grand Pallu weave pattern -->
+    <circle cx="200" cy="160" r="45" fill="none" stroke="url(#goldZariEm)" stroke-width="6"/>
+    <circle cx="400" cy="160" r="45" fill="none" stroke="url(#goldZariEm)" stroke-width="6"/>
+    <circle cx="600" cy="160" r="45" fill="none" stroke="url(#goldZariEm)" stroke-width="6"/>
+    <rect x="0" y="250" width="800" height="30" fill="#04160E" />
+  </g>
+</svg>

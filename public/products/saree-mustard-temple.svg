@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="silkMustard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#805707" />
+      <stop offset="40%" stop-color="#C28B15" />
+      <stop offset="70%" stop-color="#9C6B0B" />
+      <stop offset="100%" stop-color="#6B4702" />
+    </linearGradient>
+    <linearGradient id="kumkumRed" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#730B1C" />
+      <stop offset="50%" stop-color="#9E162D" />
+      <stop offset="100%" stop-color="#540513" />
+    </linearGradient>
+    <pattern id="gopuramPattern" width="50" height="60" patternUnits="userSpaceOnUse">
+      <polygon points="25,5 45,55 5,55" fill="url(#kumkumRed)" stroke="#FFE885" stroke-width="1.5" />
+    </pattern>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#silkMustard)" />
+  
+  <!-- Subtle circular zari buttas -->
+  <g fill="#FFE885" opacity="0.6">
+    <circle cx="150" cy="200" r="10"/>
+    <circle cx="350" cy="200" r="10"/>
+    <circle cx="550" cy="200" r="10"/>
+    <circle cx="250" cy="350" r="10"/>
+    <circle cx="450" cy="350" r="10"/>
+    <circle cx="650" cy="350" r="10"/>
+    <circle cx="150" cy="500" r="10"/>
+    <circle cx="350" cy="500" r="10"/>
+    <circle cx="550" cy="500" r="10"/>
+  </g>
+
+  <!-- Temple Spire Border in Kumkum Red -->
+  <g transform="translate(0, 680)">
+    <rect x="0" y="0" width="800" height="60" fill="url(#gopuramPattern)" />
+    <rect x="0" y="60" width="800" height="260" fill="url(#kumkumRed)" />
+    <!-- Rich Annapakshi Zari Panel -->
+    <rect x="0" y="90" width="800" height="160" fill="#D4AF37" opacity="0.85" />
+    <circle cx="200" cy="170" r="40" fill="#730B1C" />
+    <circle cx="400" cy="170" r="40" fill="#730B1C" />
+    <circle cx="600" cy="170" r="40" fill="#730B1C" />
+  </g>
+</svg>
