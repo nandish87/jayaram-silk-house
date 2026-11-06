@@ -24,7 +24,7 @@ export const brandConfig = {
     subTagline: "Generations of Master Weavers in Madanapalle crafting pure mulberry silk & authentic zari drapes.",
     establishedYear: "1988",
     originCity: "Madanapalle, Andhra Pradesh",
-    auspiciousSymbol: "卐 श्री गणेशाय नमः 卐",
+    auspiciousSymbol: "卐 శ్రీ గణేశాయ నమః 卐",
     silkMarkCertified: true,
     pureHandloomCertified: true,
   },
@@ -38,9 +38,9 @@ export const brandConfig = {
     primaryPhone: "9640008902",
     whatsapp: {
       number: "919640008902",
-      prefilledMessage: "Namaste Y. Jayaram & Bro's, I am interested in wholesale pure handloom silk sarees from your Madanapalle looms. Please share your catalog and wholesale price list.",
+      prefilledMessage: "Namaskaram Y. Jayaram & Bro's, I am interested in wholesale pure handloom silk sarees from your Madanapalle looms. Please share your catalog and wholesale price list.",
       quickInquiryMessage: (productName) => 
-        `Namaste! I would like to inquire about the wholesale pricing and availability for "${productName}" from Y. Jayaram Silk Sarees, Madanapalle.`
+        `Namaskaram! I would like to inquire about the wholesale pricing and availability for "${productName}" from Y. Jayaram Silk Sarees, Madanapalle.`
     },
     email: "yjayaramsilks@gmail.com",
     address: {

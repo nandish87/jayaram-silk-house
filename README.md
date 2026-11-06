@@ -310,6 +310,6 @@ Private / Proprietary — Y. Jayaram & Bro's, Madanapalle, Andhra Pradesh.
 
 <p align="center">
   <em>Handcrafted with ❤️ in Madanapalle, Andhra Pradesh</em><br>
-  <strong>卐 श्री गणेशाय नमः 卐</strong>
+  <strong>卐 శ్రీ గణేశాయ నమః 卐</strong>
 </p>
 

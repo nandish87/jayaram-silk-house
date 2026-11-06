@@ -31,12 +31,10 @@ export default function Hero({ onExploreClick }) {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-silk-ivory">
         <div className="max-w-3xl space-y-6">
           {/* Auspicious Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-silk-maroon-dark/80 border border-silk-gold/50 shadow-silk-glow backdrop-blur-md animate-fadeIn">
-            <span className="text-silk-gold text-sm font-serif">卐</span>
-            <span className="text-xs font-serif tracking-widest text-silk-gold-light uppercase font-semibold">
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-silk-maroon-dark/80 border border-silk-gold/50 shadow-silk-glow backdrop-blur-md animate-fadeIn">
+            <span className="text-xs font-serif tracking-widest text-silk-gold uppercase font-semibold">
               {brandConfig.identity.auspiciousSymbol}
             </span>
-            <span className="text-silk-gold text-sm font-serif">卐</span>
           </div>
 
           {/* Master Heading */}

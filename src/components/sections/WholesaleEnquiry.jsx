@@ -35,7 +35,7 @@ export default function WholesaleEnquiry() {
     e.preventDefault();
 
     // Generate WhatsApp URL with pre-filled structured message
-    const message = `*Namaste Y. Jayaram & Bro's (Madanapalle Silk Weavers)*
+    const message = `*Namaskaram Y. Jayaram & Bro's (Madanapalle Silk Weavers)*
 I would like to place a wholesale inquiry for Pure Handloom Silk Sarees:
 
 • *Name / Business:* ${formData.fullName} ${formData.businessName ? `(${formData.businessName})` : ''}

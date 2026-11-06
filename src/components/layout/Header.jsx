@@ -30,10 +30,8 @@ export default function Header() {
       {/* Auspicious Top Announcement Bar */}
       <div className="bg-silk-maroon-dark border-b border-silk-gold/20 text-silk-gold-light py-1.5 px-4 text-xs font-serif tracking-wider text-center relative z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <span className="hidden sm:inline-flex items-center gap-1.5 text-silk-gold">
-            <span className="text-sm">卐</span>
+          <span className="hidden sm:inline-flex items-center gap-1.5 text-silk-gold font-serif">
             <span>{brandConfig.identity.auspiciousSymbol}</span>
-            <span className="text-sm">卐</span>
           </span>
           <span className="mx-auto sm:mx-0 flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
