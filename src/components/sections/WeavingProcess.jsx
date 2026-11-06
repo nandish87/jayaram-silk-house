@@ -103,10 +103,10 @@ export default function WeavingProcess() {
             <div className="relative rounded-2xl overflow-hidden border border-silk-gold/30 shadow-md aspect-[16/10]">
               <img
                 src={
-                  activeStepIndex === 0 ? '/products/gallery-warp.svg' :
-                  activeStepIndex === 1 ? '/products/gallery-drape.svg' :
-                  activeStepIndex === 2 ? '/products/gallery-loom.svg' :
-                  '/products/gallery-pallu.svg'
+                  activeStepIndex === 0 ? '/products/saree-moss-green-gold.jpg' :
+                  activeStepIndex === 1 ? '/products/saree-royal-blue-emerald.jpg' :
+                  activeStepIndex === 2 ? '/products/saree-navy-gold-silver-butta.jpg' :
+                  '/products/saree-purple-fuchsia-bridal.jpg'
                 }
                 alt={currentStep.title}
                 className="w-full h-full object-cover"

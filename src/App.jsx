@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import FloatingWhatsApp from './components/layout/FloatingWhatsApp';
+import MonolithWatermark from './components/layout/MonolithWatermark';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Collections from './components/sections/Collections';
@@ -61,6 +62,9 @@ export default function App() {
 
       {/* Persistent Floating WhatsApp Action */}
       <FloatingWhatsApp />
+
+      {/* Monolith Pro-Bono Watermark Badge */}
+      <MonolithWatermark />
 
       {/* 3D Fabric Swatch Quick View Modal */}
       {selectedProduct && (

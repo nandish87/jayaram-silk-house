@@ -86,7 +86,7 @@ export default function SareeCard3D({ product, onQuickView }) {
         <div className="space-y-1.5">
           <div className="flex items-center justify-between text-[11px] text-silk-gold">
             <span className="font-serif uppercase tracking-wider">{product.category.replace('-', ' ')}</span>
-            <span>{product.weight}</span>
+            <span>Handloom Silk</span>
           </div>
 
           <h3 className="font-display font-semibold text-lg text-silk-ivory group-hover:text-gold-gradient transition-colors line-clamp-1">
@@ -108,7 +108,7 @@ export default function SareeCard3D({ product, onQuickView }) {
               </span>
             </div>
             <span className="text-[11px] text-silk-gold-light/90 border border-silk-gold/30 px-2 py-0.5 rounded bg-silk-maroon/50">
-              {product.minOrderQty}
+              Madanapalle Weave
             </span>
           </div>
 

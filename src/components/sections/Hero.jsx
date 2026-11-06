@@ -40,7 +40,7 @@ export default function Hero({ onExploreClick }) {
           {/* Master Heading */}
           <div className="space-y-2">
             <p className="text-xs sm:text-sm font-serif tracking-[0.25em] text-silk-gold uppercase font-semibold">
-              Master Weavers of Madanapalle • Established {brandConfig.identity.establishedYear}
+              Master Weavers of Madanapalle • Pure Handloom Silk
             </p>
             <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-silk-ivory">
               Pure Hand Loom <br />
@@ -112,7 +112,7 @@ export default function Hero({ onExploreClick }) {
             <span className="text-xs text-silk-sand block">Pure Handloom Mulberry Silk</span>
           </div>
           <div className="space-y-1">
-            <span className="font-display font-bold text-2xl sm:text-3xl text-gold-gradient block">35+ Yrs</span>
+            <span className="font-display font-bold text-2xl sm:text-3xl text-gold-gradient block">Family Looms</span>
             <span className="text-xs text-silk-sand block">Master Weavers Lineage</span>
           </div>
           <div className="space-y-1">

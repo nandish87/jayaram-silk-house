@@ -16,7 +16,7 @@ export default function About() {
           <div className="lg:col-span-5 space-y-6">
             <div className="relative rounded-3xl overflow-hidden shadow-card-lux border-2 border-silk-gold/40 group">
               <img
-                src="/products/gallery-loom.svg"
+                src="/products/saree-navy-gold-silver-butta.jpg"
                 alt="Madanapalle Pit Loom Weaving"
                 className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
               />

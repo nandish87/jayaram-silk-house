@@ -2,38 +2,29 @@
  * ============================================================================
  * BRAND CONFIGURATION FILE (brand.config.js)
  * ============================================================================
- * WHITE-LABEL CORE:
- * Edit any field in this single configuration file to completely rebrand the site:
- * - Business name, proprietor & tagline
- * - Phone numbers, WhatsApp & direct contact links
- * - Physical address, Google Maps link & coordinates
- * - Auspicious motifs & branding
- * - Color theme & 3D fabric shader aesthetics
- * - Product collections, catalogue items & weaving process
- * - SEO meta tags & LocalBusiness Schema.org JSON-LD
+ * Cleaned authentic business information for Y. Jayaram & Bro's, Madanapalle.
+ * All fake/fabricated details (fake email, fake year, fake retail MRPs) removed.
+ * Real sarees from the Madanapalle looms cataloged with real photos.
  * ============================================================================
  */
 
 export const brandConfig = {
-  // Brand Identity
+  // Brand Identity (100% Authentic)
   identity: {
     brandName: "Y. Jayaram",
     legalName: "Y. Jayaram – Pure Hand Loom Silk Sarees & Manufacturers",
     proprietor: "Prop: Y. Jayaram & Bro's",
-    tagline: "Authentic Handloom Silk Sarees & Direct Wholesale Manufacturers",
+    tagline: "Authentic Handloom Pure Silk Sarees & Direct Wholesale Manufacturers",
     subTagline: "Generations of Master Weavers in Madanapalle crafting pure mulberry silk & authentic zari drapes.",
-    establishedYear: "1988",
     originCity: "Madanapalle, Andhra Pradesh",
     auspiciousSymbol: "卐 శ్రీ గణేశాయ నమః 卐",
-    silkMarkCertified: true,
-    pureHandloomCertified: true,
   },
 
-  // Contact Information
+  // Contact Information (Verified from Owner)
   contact: {
     phones: [
       { display: "+91 96400 08902", clean: "9640008902", label: "Primary / Wholesale Desk" },
-      { display: "+91 96660 72696", clean: "9666072696", label: "Sales & Orders" }
+      { display: "+91 96660 72696", clean: "9666072696", label: "Orders & Inquiries" }
     ],
     primaryPhone: "9640008902",
     whatsapp: {
@@ -42,7 +33,6 @@ export const brandConfig = {
       quickInquiryMessage: (productName) => 
         `Namaskaram! I would like to inquire about the wholesale pricing and availability for "${productName}" from Y. Jayaram Silk Sarees, Madanapalle.`
     },
-    email: "yjayaramsilks@gmail.com",
     address: {
       line1: "III-81-F4, Vivekananda School Road",
       line2: "Mayabazaar, Neerugattuvaripalle",
@@ -60,7 +50,15 @@ export const brandConfig = {
         longitude: 78.5028
       }
     },
-    businessHours: "Monday to Sunday: 9:00 AM – 9:00 PM IST (Open all 7 days for wholesale buyers & showroom visitors)"
+    businessHours: "Monday to Sunday: 9:00 AM – 9:00 PM IST (Open for wholesale buyers & showroom visitors)"
+  },
+
+  // Developer & Sponsor Attribution (Monolith)
+  credits: {
+    developerName: "Monolith",
+    developerTagline: "One System. Every Reply. | Autonomous AI Infrastructure",
+    developerUrl: "https://getmonolith.in/",
+    attributionText: "Website designed & powered by Monolith — Autonomous AI Infrastructure"
   },
 
   // Color Palette
@@ -97,238 +95,333 @@ export const brandConfig = {
 
   // Product Collections
   collections: [
-    { id: "all", name: "All Masterpieces", count: "40+ Designs" },
-    { id: "pure-silk", name: "Pure Handloom Silk", count: "Heritage Weaves" },
-    { id: "bridal-pattu", name: "Bridal Pattu & Muhurtham", count: "Grand Zari Pallu" },
-    { id: "checks-kattam", name: "Checks & Kattam", count: "Traditional Madanapalle" },
-    { id: "temple-border", name: "Temple Border (Korvai)", count: "Classic Contrast" },
-    { id: "wholesale-bulk", name: "Wholesale Bundles", count: "Direct Weaver Lots" }
+    { id: "all", name: "All Handloom Weaves" },
+    { id: "bridal-pattu", name: "Bridal Pattu & Wedding" },
+    { id: "pure-silk", name: "Pure Mulberry Silk" },
+    { id: "temple-border", name: "Temple Border & Korvai" },
+    { id: "checks-kattam", name: "Traditional Checks & Buttas" }
   ],
 
-  // Featured Saree Catalog
+  // Real Saree Products (Cropped from genuine loom inventory in /sareess)
   products: [
     {
-      id: "ys-01",
-      code: "YJ-PATTU-01",
-      name: "Bridal Crimson Korvai Pure Pattu Saree",
+      id: "yj-real-01",
+      code: "YJ-01",
+      name: "Bridal Fuchsia Pink & Royal Violet Korvai Silk",
       category: "bridal-pattu",
       weave: "Traditional Korvai Interlocking Handloom Weave",
-      zari: "Authentic Gold Zari Brocade",
-      fabric: "100% Pure Mulberry Silk (Silk Mark Certified)",
-      color: "Deep Crimson Maroon & Royal Gold",
-      accentColor: "#6B101E",
+      zari: "Pure Gold Finish Floral Zari Pallu",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Fuchsia Pink & Royal Violet",
+      accentColor: "#891336",
       zariColor: "#D4AF37",
-      length: "6.3 Meters (Including Blouse Piece)",
-      weight: "approx. 850 grams (Heavy Wedding Loom)",
-      border: "Grand 9-inch Temple Zari Border with Mayil (Peacock) Motifs",
-      pallu: "Intricate Rich Zari Floral Jaal Pallu",
-      wholesalePrice: "Direct Weaver Quote on Inquiry",
-      retailMrpValue: "₹18,500 - ₹24,000 (Market)",
-      minOrderQty: "1 Piece for Sample / 5+ for Wholesale",
-      badge: "Bestseller Bridal",
-      image: "/products/saree-crimson-bridal.svg",
-      description: "Our signature bridal masterpiece woven on traditional pit looms in Madanapalle. Featuring rich Korvai temple borders, dense pure gold zari pallu, and lustrous mulberry silk that drapes with regal grace."
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Grand Korvai Floral Zari Border",
+      pallu: "Rich Brocade Zari Jaal Pallu",
+      wholesalePrice: "Direct Weaver Price on Inquiry",
+      badge: "Bridal Masterpiece",
+      image: "/products/saree-purple-fuchsia-bridal.jpg",
+      description: "Authentic Madanapalle handloom bridal silk saree woven with contrasting royal violet body and dense gold zari jaal on vivid fuchsia pink."
     },
     {
-      id: "ys-02",
-      code: "YJ-EMERALD-02",
-      name: "Mayilkan Emerald Pure Silk Saree",
-      category: "pure-silk",
-      weave: "Double-warp Handloom Jacquard Silk",
-      zari: "Half-Fine Tested Silver-Gold Zari",
-      fabric: "Certified Pure Handloom Mulberry Silk",
-      color: "Deep Forest Emerald & Mustard Zari Border",
-      accentColor: "#0D3A24",
-      zariColor: "#E5C158",
-      length: "6.2 Meters with running contrast blouse",
-      weight: "approx. 720 grams",
-      border: "Dual-tone Contrast Zari Border with Rudraksha Motifs",
-      pallu: "Solid Zari Geometric Heritage Pallu",
-      wholesalePrice: "Wholesale Bulk Rate on WhatsApp",
-      retailMrpValue: "₹14,500 - ₹18,000 (Market)",
-      minOrderQty: "5 Pieces for Retailers",
-      badge: "Heritage Weave",
-      image: "/products/saree-emerald-peacock.svg",
-      description: "A timeless classic favored by discerning connoisseurs. Woven with double-twisted pure silk threads ensuring unmatched sheen, durability, and a smooth fluid fall."
-    },
-    {
-      id: "ys-03",
-      code: "YJ-KATTAM-03",
-      name: "Traditional Madanapalle Kattam Check Silk",
-      category: "checks-kattam",
-      weave: "Authentic Grid Kattam (Check) Hand Weave",
-      zari: "Zari Butta within each Check Grid",
-      fabric: "Pure Desi Silk Warp & Weft",
-      color: "Royal Purple & Golden Yellow Checks",
-      accentColor: "#4B1248",
-      zariColor: "#F5C842",
-      length: "6.2 Meters with Contrast Blouse",
-      weight: "approx. 680 grams",
-      border: "Ganga-Jamuna Contrast Border with Zari Lines",
-      pallu: "Traditional Striped Zari Pallu with Tassels",
-      wholesalePrice: "Special Weaver Price for Boutiques",
-      retailMrpValue: "₹12,000 - ₹15,500 (Market)",
-      minOrderQty: "3 Pieces",
-      badge: "Madanapalle Special",
-      image: "/products/saree-purple-kattam.svg",
-      description: "The pride of Madanapalle weaving clusters. Distinctive box checks housing micro floral buttas, framed by an artisanal contrast border created through manual shuttle adjustments."
-    },
-    {
-      id: "ys-04",
-      code: "YJ-TEMPLE-04",
-      name: "Kanchi Temple Border Mustard Haldi Silk",
+      id: "yj-real-02",
+      code: "YJ-02",
+      name: "Royal Sapphire Blue with Emerald Peacock Border",
       category: "temple-border",
-      weave: "Interlocked Temple (Gopuram) Border Weave",
-      zari: "Heavy Zari Border & Pallu",
-      fabric: "Pure 4-ply Madanapalle Silk",
-      color: "Auspicious Haldi Yellow & Kumkum Red Border",
-      accentColor: "#B57B0A",
-      zariColor: "#FFDE59",
-      length: "6.3 Meters",
-      weight: "approx. 780 grams",
-      border: "Triangular Gopuram Temple Border in Deep Crimson",
-      pallu: "Rich Brocade Zari Weave with Annapakshi Birds",
-      wholesalePrice: "Manufacturer Direct Rates",
-      retailMrpValue: "₹16,000 - ₹21,000 (Market)",
-      minOrderQty: "5 Pieces / Assorted",
-      badge: "Pooja & Muhurtham",
-      image: "/products/saree-mustard-temple.svg",
-      description: "Woven for festive celebrations and wedding muhurthams. The vibrant auspicious yellow silk is complemented by contrasting kumkum borders with sacred temple spire designs."
-    },
-    {
-      id: "ys-05",
-      code: "YJ-PLAIN-05",
-      name: "Regal Royal Blue Plain Silk with Broad Zari Border",
-      category: "pure-silk",
-      weave: "Fine Satin-weave Body with Heavy Loom Border",
-      zari: "Pure Gold Finish Floral Zari",
-      fabric: "Superfine Mulberry Silk",
-      color: "Royal Sapphire Blue & Gold",
-      accentColor: "#102347",
-      zariColor: "#E2B842",
-      length: "6.2 Meters with Designer Blouse",
-      weight: "approx. 650 grams",
-      border: "10-inch Broad Floral Vine (Kodi Visiri) Zari Border",
-      pallu: "Grand Brocade Tissue Pallu",
-      wholesalePrice: "Wholesale Inquiries Welcome",
-      retailMrpValue: "₹13,500 - ₹17,000 (Market)",
-      minOrderQty: "4 Pieces",
-      badge: "Modern Classic",
-      image: "/products/saree-royal-blue.svg",
-      description: "Understated luxury at its finest. A solid luminous sapphire blue silk body provides an arresting backdrop to the lavish golden border, perfect for evening receptions."
-    },
-    {
-      id: "ys-06",
-      code: "YJ-BULK-06",
-      name: "Retailer Wholesale Bulk Assortment Bundle (10 Sarees)",
-      category: "wholesale-bulk",
-      weave: "Mixed Master Handloom Assortment",
-      zari: "Tested Gold Zari & Threadwork",
-      fabric: "100% Guaranteed Pure Silk",
-      color: "10 Distinct Fast-Moving Festival Colors",
-      accentColor: "#581420",
+      weave: "Double-warp Handloom Jacquard Silk",
+      zari: "Fine Tested Gold Zari with Peacock Motifs",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Royal Sapphire Blue & Emerald Green",
+      accentColor: "#3F298D",
       zariColor: "#D4AF37",
-      length: "Standard 6.2 - 6.3 Meters with Blouse",
-      weight: "approx. 7.5 kg total pack",
-      border: "Assorted Temple, Floral & Contrast Borders",
-      pallu: "Traditional Heavy Zari Pallu on each saree",
-      wholesalePrice: "Direct Master Weaver Price Per Lot",
-      retailMrpValue: "High Profit Margin for Retail Showrooms",
-      minOrderQty: "1 Bundle (10 Sarees)",
-      badge: "Wholesale Pack",
-      image: "/products/saree-bulk-bundle.svg",
-      description: "Specially curated for saree showrooms, boutique owners, and cloth merchants across India. Pre-sorted assortment of best-selling wedding & festive handloom pure silk sarees at unbeatable direct-from-loom rates."
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Double Peacock Contrast Zari Border",
+      pallu: "Solid Heritage Zari Pallu",
+      wholesalePrice: "Wholesale Rate on WhatsApp",
+      badge: "Best Seller",
+      image: "/products/saree-royal-blue-emerald.jpg",
+      description: "A signature classic featuring radiant royal blue pure silk complemented by an emerald green contrast border with magnificent Mayil (peacock) zari motifs."
+    },
+    {
+      id: "yj-real-03",
+      code: "YJ-03",
+      name: "Emerald Green & Maroon Zari Border Pure Silk",
+      category: "pure-silk",
+      weave: "Traditional Madanapalle Handloom Weave",
+      zari: "Authentic Gold Zari Brocade",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Emerald Green & Maroon",
+      accentColor: "#153220",
+      zariColor: "#D4AF37",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Rich Zari Border with Floral Creepers",
+      pallu: "Full Brocade Heavy Zari Pallu",
+      wholesalePrice: "Direct Weaver Price on Inquiry",
+      badge: "Heritage Pure Silk",
+      image: "/products/saree-emerald-maroon-zari.jpg",
+      description: "Timeless South Indian wedding color combination. Deep emerald green silk body paired with a grand maroon pallu embellished with shimmering gold zari."
+    },
+    {
+      id: "yj-real-04",
+      code: "YJ-04",
+      name: "Auspicious Haldi Yellow & Rani Pink Temple Silk",
+      category: "bridal-pattu",
+      weave: "Handloom Pit Loom Weave",
+      zari: "Heavy Gold Zari Border & Mandala Butta",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Haldi Yellow & Rani Pink",
+      accentColor: "#D38C3A",
+      zariColor: "#D4AF37",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Rani Pink Temple Border with Zari Creepers",
+      pallu: "Rich Brocade Zari Weave",
+      wholesalePrice: "Direct Weaver Price on Inquiry",
+      badge: "Muhurtham Special",
+      image: "/products/saree-haldi-yellow-pink.jpg",
+      description: "Woven for festive celebrations and wedding muhurthams. Vibrant yellow silk body framed by contrasting rani pink zari borders and detailed temple motifs."
+    },
+    {
+      id: "yj-real-05",
+      code: "YJ-05",
+      name: "Bottle Emerald Green & Magenta Paisley Mango Zari",
+      category: "temple-border",
+      weave: "Interlocked Handloom Weave",
+      zari: "Embossed Paisley Mango Gold Zari",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Emerald Green & Magenta",
+      accentColor: "#10644A",
+      zariColor: "#D4AF37",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Broad Paisley Mango Zari Border",
+      pallu: "Traditional Zari Pallu",
+      wholesalePrice: "Wholesale Rate on WhatsApp",
+      badge: "Festive Weave",
+      image: "/products/saree-bottle-green-magenta.jpg",
+      description: "Lustrous bottle green pure silk accented with grand paisley mango motifs and an eye-catching magenta pink contrast border."
+    },
+    {
+      id: "yj-real-06",
+      code: "YJ-06",
+      name: "Vermilion Coral Silk with Gold Zari Floral Bouquet",
+      category: "bridal-pattu",
+      weave: "Handloom Satin Silk with Fine Zari Pinstripes",
+      zari: "Hand-threaded Gold Zari Bouquet",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Vermilion Coral Orange & Gold",
+      accentColor: "#D42D1A",
+      zariColor: "#D4AF37",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Running Zari Stripes with Floral Motif",
+      pallu: "Solid Zari Motif Pallu",
+      wholesalePrice: "Direct Weaver Price on Inquiry",
+      badge: "Unique Artistry",
+      image: "/products/saree-vermilion-coral-gold.jpg",
+      description: "Bright festive coral-orange pure silk featuring intricate golden floral bouquet embroidery and vertical fine zari pinstripes."
+    },
+    {
+      id: "yj-real-07",
+      code: "YJ-07",
+      name: "Sky Blue & Sapphire Mandapam Silk",
+      category: "pure-silk",
+      weave: "Fine Jacquard Handloom Silk",
+      zari: "Authentic Gold Zari Mandala Centerpiece",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Sky Blue & Royal Blue",
+      accentColor: "#1499E8",
+      zariColor: "#C5C070",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Contrast Royal Blue Border",
+      pallu: "Intricate Mandapam Temple Medallion",
+      wholesalePrice: "Direct Weaver Price on Inquiry",
+      badge: "Exclusive Hue",
+      image: "/products/saree-sky-blue-cyan.jpg",
+      description: "Dual-tone sky blue and royal blue silk woven with a stunning central zari mandapam medallion, ideal for contemporary and traditional functions."
+    },
+    {
+      id: "yj-real-08",
+      code: "YJ-08",
+      name: "Midnight Navy Blue Ganga-Jamuna Zari Butta Silk",
+      category: "checks-kattam",
+      weave: "Grid Handloom Weave with Dual Zari Buttas",
+      zari: "Gold and Silver Tested Zari Buttas",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Midnight Navy & Dual Zari",
+      accentColor: "#25224D",
+      zariColor: "#D4AF37",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Heavy Striped Zari Pallu with Temple Bands",
+      pallu: "Rich Heritage Striped Pallu",
+      wholesalePrice: "Wholesale Rate on WhatsApp",
+      badge: "Artisanal Weave",
+      image: "/products/saree-navy-gold-silver-butta.jpg",
+      description: "Exquisite midnight navy silk adorned with alternating gold and silver diamond buttas and a lavish multi-banded zari pallu."
+    },
+    {
+      id: "yj-real-09",
+      code: "YJ-09",
+      name: "Silver Ivory with Royal Purple Temple Border",
+      category: "temple-border",
+      weave: "Handloom Korvai Weave",
+      zari: "Tested Gold Zari with Temple Spire Accents",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Silver Ivory & Royal Purple",
+      accentColor: "#602C74",
+      zariColor: "#DFD4C0",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Deep Purple Temple Gopuram Border",
+      pallu: "Heavy Zari Pallu",
+      wholesalePrice: "Direct Weaver Price on Inquiry",
+      badge: "Temple Classic",
+      image: "/products/saree-silver-grey-purple.jpg",
+      description: "Understated elegance with a glowing silver-ivory body and contrasting deep purple border with classic gopuram temple motifs."
+    },
+    {
+      id: "yj-real-10",
+      code: "YJ-10",
+      name: "Royal Wine Purple Pure Silk with Traditional Pallu",
+      category: "bridal-pattu",
+      weave: "Fine Madanapalle Pit Loom Weave",
+      zari: "Traditional Gold Zari Brocade",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Royal Wine Purple & Gold",
+      accentColor: "#603495",
+      zariColor: "#D4AF37",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Rich Floral Zari Border",
+      pallu: "Full Gold Brocade Pallu",
+      wholesalePrice: "Direct Weaver Price on Inquiry",
+      badge: "Regal Drape",
+      image: "/products/saree-wine-purple-gold.jpg",
+      description: "Grand royal wine purple pure silk with shimmering floral zari pallu, designed for traditional ceremonies and receptions."
+    },
+    {
+      id: "yj-real-11",
+      code: "YJ-11",
+      name: "Moss Green Heavy Brocade Gold Zari Silk",
+      category: "pure-silk",
+      weave: "Dense Handloom Jacquard Brocade",
+      zari: "Full Surface Fine Gold Zari Weave",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Moss Green & Antique Gold",
+      accentColor: "#494D2C",
+      zariColor: "#A29863",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Intricate Geometric Zari Borders",
+      pallu: "Heavy Brocade Zari Weave",
+      wholesalePrice: "Wholesale Rate on WhatsApp",
+      badge: "Heavy Brocade",
+      image: "/products/saree-moss-green-gold.jpg",
+      description: "A rich moss green silk saree woven with full-body gold zari brocade for unparalleled richness and sheen."
+    },
+    {
+      id: "yj-real-12",
+      code: "YJ-12",
+      name: "Lilac Lavender Pure Silk with Silver & Gold Zari",
+      category: "pure-silk",
+      weave: "Fine Handloom Silk with Dual Zari",
+      zari: "Silver and Gold Zari Medallion Border",
+      fabric: "100% Pure Mulberry Silk",
+      color: "Lilac Lavender & Silver/Gold",
+      accentColor: "#817E9D",
+      zariColor: "#D4AF37",
+      length: "Standard 6.2 - 6.3 Meters (With Blouse)",
+      border: "Dual-tone Zari Border with Floral Buttas",
+      pallu: "Striped Tissue Zari Pallu",
+      wholesalePrice: "Direct Weaver Price on Inquiry",
+      badge: "Modern Pastel",
+      image: "/products/saree-lilac-lavender-zari.jpg",
+      description: "Contemporary pastel lilac lavender pure silk with subtle circular buttas and a lustrous dual-tone silver and gold border."
     }
   ],
 
-  // 4-Step Handloom Weaving Process
+  // 4-Step Handloom Weaving Process (Authentic Craft)
   weavingProcess: [
     {
       step: "01",
-      title: "Pure Silk Yarn Selection & Degumming",
-      subTitle: "Pure Mulberry Cocoons",
-      description: "We source grade-A raw mulberry silk filaments. The raw silk is naturally cleansed, boiled, and conditioned to achieve signature softness and pristine dye-absorption."
+      title: "Pure Silk Yarn Selection",
+      subTitle: "Pure Mulberry Silk",
+      description: "We use only quality-tested natural mulberry silk filaments, degummed and prepared to achieve superior softness and dye absorption."
     },
     {
       step: "02",
-      title: "Artisanal Vat Dyeing & Warping",
-      subTitle: "Vibrant, Fast Festival Hues",
-      description: "Dyed by hand using time-tested recipes to create iconic South Indian shades—kumkum crimson, peacock emerald, auspicious haldi, and royal twilight violets."
+      title: "Artisanal Dyeing & Warping",
+      subTitle: "Vibrant Traditional Hues",
+      description: "Dyed by hand using established processes to create iconic shades—crimson, peacock blue, haldi yellow, and deep purple."
     },
     {
       step: "03",
-      title: "Loom Setup & Jacquard Zari Threading",
+      title: "Pit Loom Setup & Zari Threading",
       subTitle: "Madanapalle Pit Loom Craft",
-      description: "Thousands of warp threads are meticulously aligned by hand over 2–3 days. Intricate wooden punch-cards guide the shuttles carrying pure gold and silver zari threads."
+      description: "Thousands of warp threads are meticulously aligned on traditional pit looms. Jacquard mechanisms guide the shuttles carrying gold and silver zari."
     },
     {
       step: "04",
-      title: "Manual Weaving & Silk Mark Quality Inspection",
-      subTitle: "4 to 7 Days of Rhythm",
-      description: "Our master weavers coordinate pedals and shuttles with rhythmic precision. Each completed saree undergoes stringent examination for thread tension, border sharpness, and finish."
+      title: "Manual Weaving & Inspection",
+      subTitle: "Days of Rhythmic Craftsmanship",
+      description: "Master weavers coordinate shuttles and pedals with precision. Each completed saree is closely inspected for weave uniformity and clean finish."
     }
   ],
 
-  // Why Choose Us Pillars
+  // Why Choose Us Pillars (Authentic Manufacturer Advantages)
   whyChooseUs: [
     {
       id: "direct-manufacturer",
       title: "Direct Weaver Pricing",
-      description: "Cut out middlemen, agents, and multi-tier distributor markups. Buy directly from our family looms in Madanapalle at genuine wholesale rates.",
+      description: "Cut out middlemen and distributor markups. Buy directly from our family looms in Madanapalle at genuine manufacturer rates.",
       icon: "Factory"
     },
     {
       id: "purity",
-      title: "100% Pure Silk Guaranteed",
-      description: "We use only tested mulberry silk yarns and high-grade zari. Authentic handloom quality that retains luster for generations.",
+      title: "100% Pure Mulberry Silk",
+      description: "We use genuine tested mulberry silk yarns and high-grade zari threads that retain their luster over time.",
       icon: "ShieldCheck"
     },
     {
       id: "variety",
-      title: "Over 200+ Running Designs",
-      description: "From classic Kanchi Korvai borders and Madanapalle kattam checks to modern pastel wedding palettes, our loom capacity fulfills varied tastes.",
+      title: "Exclusive Handloom Weaves",
+      description: "From traditional Korvai borders and temple designs to modern wedding palettes, our looms cater to diverse customer preferences.",
       icon: "Sparkles"
     },
     {
       id: "wholesale-supply",
-      title: "Pan-India Bulk Dispatch",
-      description: "Safe, insured parcel delivery across Tamil Nadu, Karnataka, Telangana, Andhra Pradesh, Maharashtra, and all Indian states with video-call selection.",
+      title: "Pan-India Safe Dispatch",
+      description: "Reliable parcel delivery across Andhra Pradesh, Telangana, Karnataka, Tamil Nadu, and all Indian states with video-call selection support.",
       icon: "Truck"
     }
   ],
 
-  // Gallery Showcase Items
+  // Gallery Archive (Featuring Real Sarees from Inventory)
   gallery: [
     {
-      title: "Traditional Madanapalle Pit Loom in Action",
-      tag: "Craftsmanship",
-      image: "/products/gallery-loom.svg",
-      caption: "Our master weavers weaving intricate Korvai zari borders on traditional pit looms."
+      title: "Traditional Fuchsia & Violet Korvai Weave",
+      tag: "Bridal Pattu",
+      image: "/products/saree-purple-fuchsia-bridal.jpg",
+      caption: "Intricate floral jaal gold zari pallu on fuchsia pink pure silk."
     },
     {
-      title: "Pure Gold Zari Pallu Detail",
-      tag: "Zari Artistry",
-      image: "/products/gallery-pallu.svg",
-      caption: "Exquisite gold zari threads woven into peacocks and blossoming lotus vines."
+      title: "Royal Sapphire Blue with Peacock Border",
+      tag: "Contrast Border",
+      image: "/products/saree-royal-blue-emerald.jpg",
+      caption: "Lustrous sapphire blue pure silk with emerald peacock zari motifs."
     },
     {
-      title: "Vibrant Warp Threads on Loom",
-      tag: "Preparation",
-      image: "/products/gallery-warp.svg",
-      caption: "Over 5,000 fine pure silk threads stretched in high tension for flawless weaving."
+      title: "Midnight Navy with Dual Gold & Silver Buttas",
+      tag: "Artisanal Weave",
+      image: "/products/saree-navy-gold-silver-butta.jpg",
+      caption: "Hand-beaten weft with alternating gold and silver diamond buttas."
     },
     {
-      title: "Bridal Drapes in Natural Sunlight",
-      tag: "Rich Sheen",
-      image: "/products/gallery-drape.svg",
-      caption: "The living shimmer of pure mulberry silk shifting under changing light."
+      title: "Auspicious Haldi Yellow & Rani Pink Temple Drape",
+      tag: "Muhurtham Special",
+      image: "/products/saree-haldi-yellow-pink.jpg",
+      caption: "Classic wedding muhurtham color palette with pure gold zari finish."
     }
   ],
 
   // SEO & Social Meta
   seo: {
     title: "Y. Jayaram – Pure Hand Loom Silk Sarees & Manufacturers | Madanapalle",
-    metaDescription: "Y. Jayaram & Bro's are master handloom silk saree weavers and direct wholesale manufacturers in Madanapalle, Andhra Pradesh. Pure silk, bridal pattu, kattam checks & temple borders at direct weaver prices.",
+    metaDescription: "Y. Jayaram & Bro's are master handloom silk saree weavers and direct wholesale manufacturers in Madanapalle, Andhra Pradesh. Pure mulberry silk, bridal pattu, and temple border sarees at direct loom rates.",
     keywords: [
       "Y. Jayaram Silk Sarees",
       "Pure Handloom Silk Sarees Madanapalle",
@@ -336,12 +429,10 @@ export const brandConfig = {
       "Y Jayaram Bros Madanapalle",
       "Wholesale Pattu Sarees Andhra Pradesh",
       "Handloom Silk Saree Weavers Chittoor",
-      "Kanchi border silk sarees wholesale",
-      "Pure mulberry silk sarees direct from manufacturer",
       "Neerugattuvaripalle silk saree weavers"
     ],
-    canonicalUrl: "https://yjayaramsilks.com/",
-    ogImage: "/products/saree-crimson-bridal.svg",
+    canonicalUrl: "https://jayaram-silk-house.pages.dev/",
+    ogImage: "/products/saree-purple-fuchsia-bridal.jpg",
     locale: "en_IN",
     geo: {
       region: "IN-AP",
@@ -352,4 +443,3 @@ export const brandConfig = {
 };
 
 export default brandConfig;
-

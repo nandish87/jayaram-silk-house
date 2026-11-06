@@ -120,11 +120,7 @@ export default function ProductQuickViewModal({ product, onClose }) {
               <div className="flex flex-wrap items-center gap-3 pt-1 text-[11px] text-silk-gold-light">
                 <span className="flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-silk-gold" />
-                  <span>Silk Mark Certified</span>
-                </span>
-                <span className="flex items-center gap-1">
-                  <Scale className="w-3.5 h-3.5 text-silk-gold" />
-                  <span>{product.weight}</span>
+                  <span>100% Pure Handloom Silk</span>
                 </span>
                 <span className="flex items-center gap-1">
                   <Sparkles className="w-3.5 h-3.5 text-silk-gold" />
@@ -137,18 +133,18 @@ export default function ProductQuickViewModal({ product, onClose }) {
             <div className="pt-4 border-t border-silk-gold/30 space-y-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] text-silk-sand uppercase tracking-wider block">Pricing Tier</span>
+                  <span className="text-[10px] text-silk-sand uppercase tracking-wider block">Wholesale Pricing</span>
                   <span className="font-serif font-bold text-lg text-gold-gradient">
                     {product.wholesalePrice}
                   </span>
-                  <span className="text-[11px] text-silk-sand/70 block">
-                    Retail Market: <span className="line-through">{product.retailMrpValue}</span>
+                  <span className="text-[11px] text-silk-sand/80 block mt-0.5">
+                    Direct from Madanapalle Weaving Unit
                   </span>
                 </div>
 
                 <div className="text-right">
-                  <span className="text-[10px] text-silk-gold uppercase tracking-wider block">Min Order Qty</span>
-                  <span className="font-medium text-xs text-silk-ivory">{product.minOrderQty}</span>
+                  <span className="text-[10px] text-silk-gold uppercase tracking-wider block">Order Type</span>
+                  <span className="font-medium text-xs text-silk-ivory">Wholesale / Retail Inquiry</span>
                 </div>
               </div>
 
